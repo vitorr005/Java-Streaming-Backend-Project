@@ -2,7 +2,7 @@ package br.com.alura.filmeflix.modelos;
 
 import br.com.alura.calculos.Classificavel;
 
-public class Serie extends Titulos  {
+public class Serie extends Titulos implements Classificavel {
 
     private int temporadas;
     private int episodiosPorTemporada;
@@ -47,4 +47,12 @@ public class Serie extends Titulos  {
     }
 
 
+    @Override
+    public int getClassificacao() {
+        if (getTotaldeVisualizacoes() > 400) {
+            return 4 ;
+        } else {
+            return 2;
+        }
+    }
 }

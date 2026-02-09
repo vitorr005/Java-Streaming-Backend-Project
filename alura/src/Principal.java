@@ -33,6 +33,7 @@ public class Principal {
         minhaSerie.setTemporadas(11);
         minhaSerie.setEpisodiosPorTemporada(12);
         minhaSerie.setMinutosPorEpisidio(60);
+        minhaSerie.setTotaldeVisualizacoes(300);
 
 
 
@@ -52,7 +53,7 @@ public class Principal {
         Episodios primeiro = new Episodios();
         primeiro.setEpisodio(1);
         primeiro.setSerie(minhaSerie);
-        primeiro.setTotaldeVisualizacoes(300);
+
 
         var filme = new ArrayList<>();
         filme.add(meuFilme);

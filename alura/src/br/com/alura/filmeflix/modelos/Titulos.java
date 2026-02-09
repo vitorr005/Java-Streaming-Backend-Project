@@ -5,7 +5,7 @@ public class Titulos {
     private String nome;
     private int anoDeLacamento;
     private boolean incluidoNoPlano;
-
+    private int  totaldeVisualizacoes;
     private double somaDasavaliacoes;
     private int totalDasAvaliacao;
     private int duracaoEmMinunos;
@@ -49,5 +49,13 @@ public class Titulos {
 
     public int getDuracaoEmMinunos() {
         return duracaoEmMinunos;
+    }
+
+    public int getTotaldeVisualizacoes() {
+        return totaldeVisualizacoes;
+    }
+
+    public void setTotaldeVisualizacoes(int totaldeVisualizacoes) {
+        this.totaldeVisualizacoes = totaldeVisualizacoes;
     }
 }
