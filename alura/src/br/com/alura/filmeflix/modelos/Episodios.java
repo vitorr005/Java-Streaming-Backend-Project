@@ -2,7 +2,7 @@ package br.com.alura.filmeflix.modelos;
 
 import br.com.alura.calculos.Classificavel;
 
-public class Episodios implements Classificavel {
+public class Episodios {
 
     private int totaldeVisualizacoes;
     private int episodio;
@@ -36,12 +36,6 @@ public class Episodios implements Classificavel {
         episodio = episodio;
     }
 
-    @Override
-    public int getClassificacao() {
-        if (totaldeVisualizacoes > 100) {
-            return 4 ;
-        } else {
-            return 2;
-        }
-    }
+
+
 }

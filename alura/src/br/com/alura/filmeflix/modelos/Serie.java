@@ -1,6 +1,8 @@
 package br.com.alura.filmeflix.modelos;
 
-public class Serie extends Titulos {
+import br.com.alura.calculos.Classificavel;
+
+public class Serie extends Titulos  {
 
     private int temporadas;
     private int episodiosPorTemporada;
@@ -43,4 +45,6 @@ public class Serie extends Titulos {
     public int getDuracaoEmMinunos(){
         return temporadas * episodiosPorTemporada * minutosPorEpisidio;
     }
+
+
 }

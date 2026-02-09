@@ -5,6 +5,8 @@ import br.com.alura.filmeflix.modelos.Filme;
 import br.com.alura.filmeflix.modelos.Serie;
 import br.com.alura.filmeflix.modelos.Titulos;
 
+import java.util.ArrayList;
+
 public class Principal {
     static void main(String[] args) {
         Filme meuFilme = new Filme ();
@@ -12,7 +14,8 @@ public class Principal {
         meuFilme.setAnoDeLacamento (2011);
         meuFilme.setDuracaoEmMinunos (127);
         meuFilme.setIncluidoNoPlano (true);
-        System.out.println("Duração do filme: " + meuFilme.getDuracaoEmMinunos());
+        meuFilme.setTotaldeVisualizacoes(101);
+
 
 
         meuFilme.exibeFilme();
@@ -20,8 +23,6 @@ public class Principal {
         meuFilme.avalia(10);
         meuFilme.avalia(4);
 
-        System.out.println("Quatas avaliações: " + meuFilme.getTotalDasAvaliacao());
-        System.out.println("Nota do filme: " + meuFilme.mediaDasAvaliacoes());
 
 
         Serie minhaSerie = new Serie();
@@ -32,7 +33,9 @@ public class Principal {
         minhaSerie.setTemporadas(11);
         minhaSerie.setEpisodiosPorTemporada(12);
         minhaSerie.setMinutosPorEpisidio(60);
-        System.out.println("Para maratonar TWD: " + minhaSerie.getDuracaoEmMinunos());
+
+
+
 
         minhaSerie.exibeFilme();
 
@@ -45,10 +48,16 @@ public class Principal {
         filtro.filtrar(meuFilme);
 
 
+
         Episodios primeiro = new Episodios();
         primeiro.setEpisodio(1);
         primeiro.setSerie(minhaSerie);
         primeiro.setTotaldeVisualizacoes(300);
+
+        var filme = new ArrayList<>();
+        filme.add(meuFilme);
+        filme.add(minhaSerie);
+        System.out.println("Lista de filme :" + filme);
 
 
 
